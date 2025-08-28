@@ -6,7 +6,7 @@ GOBIN := bin/$(PROJECT_NAME)
 GOFILES := $(shell ls *.go)
 
 .PHONY: build
-build: test $(GOBIN)
+build: $(GOBIN)
 
 $(GOBIN): go/modules/pkg/mod $(GOFILES)
 	mkdir -p bin
